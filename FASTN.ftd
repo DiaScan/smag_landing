@@ -6,6 +6,7 @@ favicon: /-/marahim20.github.io/smag_landing/favicon.ico
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
+-- fastn.dependency: shaheen-senpai.github.io/fira-code
 
 -- fastn.auto-import: marahim20.github.io/smag_landing/FASTN/ds
 -- fastn.auto-import: marahim20.github.io/smag_landing/assets
