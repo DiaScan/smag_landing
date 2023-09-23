@@ -1,10 +1,15 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+
+
+
 -- component hero:
 boolean $hover-1: false
 boolean $hover-2: false
 
 -- ftd.column:
 width: fill-container
-height.fixed.px: 900
+height.fixed.vh: 100
 background.solid: #46494C
 align-content: center
 spacing.fixed.px: 60
@@ -43,20 +48,20 @@ background.solid if {hero.hover-1}: #FFF000
 color if {hero.hover-1}: #000
 $on-mouse-enter$: $ftd.set-bool($a = $hero.hover-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero.hover-1, v = false)
-link:
+link: https://smag-frontend.vercel.app/
 
 
--- ftd.text: Contact Us
-role: $inherited.types.label-large
-color: #000
-background.solid: #FFF
-border-radius.px: 16
-padding.px: 10
-background.solid if {hero.hover-2}: #FFF000
-color if {hero.hover-2}: #000
-$on-mouse-enter$: $ftd.set-bool($a = $hero.hover-2, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $hero.hover-2, v = false)
-link:
+;; -- ftd.text: Contact Us
+;; role: $inherited.types.label-large
+;; color: #000
+;; background.solid: #FFF
+;; border-radius.px: 16
+;; padding.px: 10
+;; background.solid if {hero.hover-2}: #FFF000
+;; color if {hero.hover-2}: #000
+;; $on-mouse-enter$: $ftd.set-bool($a = $hero.hover-2, v = true)
+;; $on-mouse-leave$: $ftd.set-bool($a = $hero.hover-2, v = false)
+;; link:
 
 
 -- end: ftd.row
@@ -81,17 +86,184 @@ link:
 -- ftd.column:
 width: fill-container
 height: hug-content
-padding-left.px: 120
+padding-left.px: 200
 padding.px: 120
-padding-right.px: 480
+padding-right.px: 600
 
--- ftd.text: Business Magic Unleashed
+-- ftd.text: _Business Magic Unleashed_
 role: $inherited.types.heading-large
+padding-vertical.em: 1
 
--- ftd.text: SMAG isn’t just another BI solution – it’s the key to unlocking hidden potential in your business. Extracting vital on-prem data to make informed decisions and ramp up sales, while eliminating dead stock and supply chain bottlenecks. Designed exclusively for the ambitious small to medium-sized business owner, SMAG redefines the game.
+-- ftd.text: **SMAG isn’t just another BI solution – it’s the key to unlocking hidden potential in your business. Extracting vital on-prem data to make informed decisions and ramp up sales, while eliminating dead stock and supply chain bottlenecks. Designed exclusively for the ambitious small to medium-sized business owner, SMAG redefines the game.**
 role: $inherited.types.heading-medium
-
 
 -- end: ftd.column
 
 -- end: about-card
+
+
+
+
+
+
+
+-- component blog:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 25
+align-content: center
+padding-vertical.px: 120
+
+-- placard:
+icon: $assets.files.assets.linechart.svg
+cta-1: 30%
+cta-2: Sales Boost
+
+-- placard:
+icon: $assets.files.assets.shoppingcart.svg
+cta-1: 90%
+cta-2: Dead Stock Reduced
+
+-- placard:
+icon: $assets.files.assets.zap.svg
+cta-1: 50%
+cta-2: Faster Decisions
+
+
+
+-- end: ftd.row
+
+-- end: blog
+
+-- component hero-1:
+
+-- ftd.column:
+width: fill-container
+height.fixed.calc if { ftd.device == "desktop" }: 100vh - 61px
+background.image: $bg-img
+id: hero-1
+
+-- ftd.column:
+width: hug-content
+height: hug-content
+margin-top.px if { ftd.device == "desktop" }: 100
+margin-top.px if { ftd.device == "mobile" }: 15
+margin-left.px if { ftd.device == "desktop" }: 150
+margin-left.px if { ftd.device == "mobile" }: 15
+spacing.fixed.px if { ftd.device == "desktop" }: 20
+
+-- ftd.text: “The secret ingredient to a thriving SME – SMAG’s Business Intelligence.”
+role: $fira-code-size-30-600
+;; color: #f1562a
+;; background.solid: #f1562a
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-1
+
+-- ftd.background-image bg-img:
+src: $assets.files.assets.home-background.webp
+repeat: no-repeat
+position: center-center
+size: cover
+
+
+-- component footer:
+
+-- ftd.row:
+width: fill-container
+padding-vertical.em: 2
+align-content: center
+
+-- ftd.text: Built with ❤️ @ **.hack();** by _Team DiaScan_
+role: $fira-code-size-18-500
+
+-- end: ftd.row
+
+-- end: footer
+
+
+-- component placard:
+ftd.image-src icon:
+string cta-1:
+string cta-2:
+
+-- ftd.column:
+width.fixed.percent: 20
+align-content: center
+background.solid: #e6e6e6
+spacing.fixed.px: 20
+padding-vertical.px: 70
+border-radius.px: 36
+
+
+-- ftd.image:
+src: $placard.icon
+width.fixed.px: 50
+
+-- ftd.text: $placard.cta-1
+role: $fira-code-size-30-600
+
+-- ftd.text: $placard.cta-2
+role: $fira-code-size-18-500
+
+-- end: ftd.column
+
+-- end: placard
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-30-desktop:
+size.px: 30
+weight: 600
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-30-mobile:
+size.px: 20
+weight: 600
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-30-600:
+desktop: $fira-code-size-30-desktop
+mobile: $fira-code-size-30-mobile
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-18-desktop:
+size.px: 18
+weight: 500
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-18-mobile:
+size.px: 18
+weight: 500
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-18-500:
+desktop: $fira-code-size-18-desktop
+mobile: $fira-code-size-18-mobile
+
+
+
+
