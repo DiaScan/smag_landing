@@ -10,7 +10,7 @@ boolean $hover-2: false
 -- ftd.column:
 width: fill-container
 height.fixed.vh: 100
-background.solid: #46494C
+background.solid: #82DAFF
 align-content: center
 spacing.fixed.px: 60
 padding.px: 120
