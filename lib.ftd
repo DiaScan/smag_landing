@@ -1,0 +1,97 @@
+-- component hero:
+boolean $hover-1: false
+boolean $hover-2: false
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 900
+background.solid: #46494C
+align-content: center
+spacing.fixed.px: 60
+padding.px: 120
+
+
+-- ftd.image:
+src: $assets.files.assets.briefcase.svg
+width.fixed.px: 80
+color: #FFF
+
+-- ftd.column:
+align-content: center
+
+-- ftd.text: Revolutionize Your
+role: $inherited.types.heading-large
+color: #FFF
+
+-- ftd.text: Supply Chain
+role: $inherited.types.heading-large
+color: #FFF
+
+-- end: ftd.column
+
+
+-- ftd.row:
+spacing.fixed.px: 10
+
+-- ftd.text: Discover SMAG
+role: $inherited.types.label-large
+color: #FFF
+background.solid: #000
+border-radius.px: 16
+padding.px: 10
+background.solid if {hero.hover-1}: #FFF000
+color if {hero.hover-1}: #000
+$on-mouse-enter$: $ftd.set-bool($a = $hero.hover-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero.hover-1, v = false)
+link:
+
+
+-- ftd.text: Contact Us
+role: $inherited.types.label-large
+color: #000
+background.solid: #FFF
+border-radius.px: 16
+padding.px: 10
+background.solid if {hero.hover-2}: #FFF000
+color if {hero.hover-2}: #000
+$on-mouse-enter$: $ftd.set-bool($a = $hero.hover-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero.hover-2, v = false)
+link:
+
+
+-- end: ftd.row
+
+
+
+-- end: ftd.column
+
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+-- component about-card:
+
+-- ftd.column:
+width: fill-container
+height: hug-content
+padding-left.px: 120
+padding.px: 120
+padding-right.px: 480
+
+-- ftd.text: Business Magic Unleashed
+role: $inherited.types.heading-large
+
+-- ftd.text: SMAG isn’t just another BI solution – it’s the key to unlocking hidden potential in your business. Extracting vital on-prem data to make informed decisions and ramp up sales, while eliminating dead stock and supply chain bottlenecks. Designed exclusively for the ambitious small to medium-sized business owner, SMAG redefines the game.
+role: $inherited.types.heading-medium
+
+
+-- end: ftd.column
+
+-- end: about-card

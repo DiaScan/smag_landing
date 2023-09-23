@@ -9,6 +9,9 @@ favicon: /-/marahim20.github.io/smag_landing/favicon.ico
 
 -- fastn.auto-import: marahim20.github.io/smag_landing/FASTN/ds
 -- fastn.auto-import: marahim20.github.io/smag_landing/assets
+-- fastn.auto-import: marahim20.github.io/smag_landing/lib
+-- fastn.auto-import: fastn-community.github.io/roboto-typography
+
 -- fastn.auto-import: doc-site
 
 -- fastn.sitemap:
